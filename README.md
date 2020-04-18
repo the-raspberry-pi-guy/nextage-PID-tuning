@@ -19,3 +19,5 @@ Discussion with Vlad:
 * 18/04
   * Difficulties with rqt_multiplot seg faulting when trying to subscribe to /joint_states. Think I get the same position information from /rarm_controller/state wihtout the seg fault:
 ![](img/rqt_multiplot.png)
+  * Finding rqt_multiplot very tempremental and often crashing - just keep to single plots. FIXED: Own misuse - use the message receipt time on the x axis, rather than the clock.
+  * Bring up with Vlad the difference in topic names between running Gazebo and running Kawada simulator
