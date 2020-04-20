@@ -21,3 +21,8 @@ Discussion with Vlad:
 ![](img/rqt_multiplot.png)
   * Finding rqt_multiplot very tempremental and often crashing - just keep to single plots. FIXED: Own misuse - use the message receipt time on the x axis, rather than the clock.
   * Bring up with Vlad the difference in topic names between running Gazebo and running Kawada simulator
+
+* 20/04
+  * Complete rqt_multiplot configuration (see config file) - plot desired and actual as per Vlad's instructions
+  * Can find good values for RARM_JOINT0 and RARM_JOINT1, but when trying motion test on RARM_JOINT2, a lot of disturbance occurs:
+![](img/disturbance.png)
