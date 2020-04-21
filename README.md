@@ -30,3 +30,6 @@ Discussion with Vlad:
 * 21/04
   * Discovered that similar (worse) calibration issues occur in the Nextage Open (open source version of IPAB's Nextage): https://github.com/tork-a/rtmros_nextage
   * Currently exploring the PR2 robot
+    * Seems that the PR2 URDF is very different from Nextage - it has many URDFs included in it for all of the different parts of the PR2 robot (forearm, upperarm etc)
+    * Looking into the "damping" field of the PR2 URDF -
+      * Damping looks promising - added a damping term, with 0 friction to each joint, recalibrating PID gains
