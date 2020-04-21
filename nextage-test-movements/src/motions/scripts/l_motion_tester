@@ -18,12 +18,12 @@ class RightArm:
     def __init__(self, joint):
         self.pub = rospy.Publisher("/larm_controller/command", JointTrajectory, queue_size=1)
         self.names = [u'LARM_JOINT0', u'LARM_JOINT1', u'LARM_JOINT2', u'LARM_JOINT3', u'LARM_JOINT4', u'LARM_JOINT5']
-        self.rarm_limits = [(-1.570796, 1.570796),
-                            (-2.44346, 1.047197),
-                            (-1.22173, 1.570796),
-                            (-1.74532, 3.141592),
-                            (-3.5779, 1.134464),
-                            (-4.712388, 4.712388)]
+        self.larm_limits = [(-1.5, 1.5),
+                            (-2.4, 0.9),
+                            (-1.2, 1.),
+                            (-1.7, 3.1),
+                            (-3.5, 1.1),
+                            (-4.7, 4.7)]
         self.joint_num = int(joint[1])
 
     def range_tester(self):
