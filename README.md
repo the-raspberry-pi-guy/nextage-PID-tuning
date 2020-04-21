@@ -26,3 +26,7 @@ Discussion with Vlad:
   * Complete rqt_multiplot configuration (see config file) - plot desired and actual as per Vlad's instructions
   * Can find good values for RARM_JOINT0 and RARM_JOINT1, but when trying motion test on RARM_JOINT2, a lot of disturbance occurs:
 ![](img/disturbance.png)
+
+* 21/04
+  * Discovered that similar (worse) calibration issues occur in the Nextage Open (open source version of IPAB's Nextage): https://github.com/tork-a/rtmros_nextage
+  * Currently exploring the PR2 robot

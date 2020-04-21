@@ -39,7 +39,7 @@
                                     <type>control_msgs/JointTrajectoryControllerState</type>
                                 </x_axis>
                                 <y_axis>
-                                    <field>desired/positions/0</field>
+                                    <field>actual/positions/0</field>
                                     <field_type>0</field_type>
                                     <scale>
                                         <absolute_maximum>1.6</absolute_maximum>
@@ -377,7 +377,7 @@
                                 <type>0</type>
                             </style>
                             <subscriber_queue_size>100</subscriber_queue_size>
-                            <title>Copy of Actual</title>
+                            <title>Desired</title>
                         </curve_1>
                     </curves>
                     <legend>
@@ -423,8 +423,8 @@
                                     <field>actual/positions/3</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1.6</absolute_maximum>
-                                        <absolute_minimum>-1.6</absolute_minimum>
+                                        <absolute_maximum>3.2</absolute_maximum>
+                                        <absolute_minimum>-3.2</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>1</type>
@@ -474,8 +474,8 @@
                                     <field>desired/positions/3</field>
                                     <field_type>0</field_type>
                                     <scale>
-                                        <absolute_maximum>1.6</absolute_maximum>
-                                        <absolute_minimum>-1.6</absolute_minimum>
+                                        <absolute_maximum>3.2</absolute_maximum>
+                                        <absolute_minimum>-3.2</absolute_minimum>
                                         <relative_maximum>0</relative_maximum>
                                         <relative_minimum>-1000</relative_minimum>
                                         <type>1</type>
