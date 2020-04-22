@@ -33,3 +33,4 @@ Discussion with Vlad:
     * Seems that the PR2 URDF is very different from Nextage - it has many URDFs included in it for all of the different parts of the PR2 robot (forearm, upperarm etc)
     * Looking into the "damping" field of the PR2 URDF -
       * Damping looks promising - added a damping term, with 0 friction to each joint, recalibrating PID gains
+      * Have to edit the PID gains in the actual YAML file before editing them in the URDF. Rqt_reconfigure gains are not persistent over reboots of Gazebo

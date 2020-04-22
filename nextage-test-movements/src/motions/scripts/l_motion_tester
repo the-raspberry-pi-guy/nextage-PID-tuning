@@ -30,8 +30,8 @@ class RightArm:
         initpos = np.zeros(6)
         lower = np.zeros(6)
         upper = np.zeros(6)
-        lower[self.joint_num] = self.rarm_limits[self.joint_num][0]
-        upper[self.joint_num] = self.rarm_limits[self.joint_num][1]
+        lower[self.joint_num] = self.larm_limits[self.joint_num][0]
+        upper[self.joint_num] = self.larm_limits[self.joint_num][1]
 
         pos = [lower, upper, initpos]
         timing = [3.0, 9.0, 12.0]
