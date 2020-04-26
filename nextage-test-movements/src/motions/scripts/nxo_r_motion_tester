@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+# RARM_JOINT motion for Nextage Open
+# 0: limit lower="-1.53589" upper="1.53589" effort="150" velocity="0.5" 
+# 1: limit lower="-2.44346" upper="1.0472" effort="200" velocity="0.5" 
+# 2: limit lower="-2.75762" upper="0" effort="100" velocity="0.5" 
+# 3: limit lower="-2.87979" upper="1.8326" effort="100" velocity="0.5"
+# 4: limit lower="-1.74533" upper="1.74533" effort="100" velocity="0.5"
+# 5: limit lower="-4.712388" upper="4.712388" effort="150" velocity="1.0"
+
+from trajectory_msgs.msg import JointTrajectoryPoint, JointTrajectory
+import numpy as np
+import rospy
+import time
+import sys
+
+class RightArm:
+
+    def __init__(self, joint):
+        self.pub = rospy.Publisher("/rarm_controller/command", JointTrajectory, queue_size=1)
+        self.names = [u'RARM_JOINT0', u'RARM_JOINT1', u'RARM_JOINT2', u'RARM_JOINT3', u'RARM_JOINT4', u'RARM_JOINT5']
+        self.rarm_limits = [(-1.4, 1.4),
+                            (-2.35, 0.9),
+                            (-2.7, -0.1),
+                            (-2.8, 1.7),
+                            (-1.6, 1.6),
+                            (-4.6, 4.6)]
+        self.joint_num = int(joint[1])
+
+    def range_tester(self):
+        initpos = np.zeros(6)
+        lower = np.zeros(6)
+        upper = np.zeros(6)
+        lower[self.joint_num] = self.rarm_limits[self.joint_num][0]
+        upper[self.joint_num] = self.rarm_limits[self.joint_num][1]
+
+        pos = [lower, upper, initpos]
+        timing = [3.0, 9.0, 12.0]
+        trajectory_time = timing[len(timing)-1]
+
+        trajectory_message = JointTrajectory()
+        trajectory_message.joint_names = [x.encode('ascii') for x in self.names]
+        for i in range(0, len(pos)):
+            point = JointTrajectoryPoint()
+            point.velocities = np.zeros(6).tolist()
+            point.positions = pos[i].tolist()
+            point.time_from_start = rospy.Duration(timing[i])
+            trajectory_message.points.append(point)
+
+        trajectory_message.header.stamp = rospy.Time.now()
+        print("Moving through joint limit range of RARM_JOINT" + str(self.joint_num))
+        # print(trajectory_message)
+        time.sleep(2)
+        self.pub.publish(trajectory_message)
+
+
+def main(args):
+    rospy.init_node("right_arm_motion_tester")
+    rarm = RightArm(args)
+    rarm.range_tester()
+
+if __name__ == '__main__':
+    main(sys.argv)
