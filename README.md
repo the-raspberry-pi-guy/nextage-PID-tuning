@@ -34,3 +34,9 @@ Discussion with Vlad:
     * Looking into the "damping" field of the PR2 URDF -
       * Damping looks promising - added a damping term, with 0 friction to each joint, recalibrating PID gains
       * Have to edit the PID gains in the actual YAML file before editing them in the URDF. Rqt_reconfigure gains are not persistent over reboots of Gazebo
+
+* 24/04
+  * Meeting with Sethu - continue work on Nextage Gazebo tuning
+
+* 26/04
+  * Experimented again with the Nextage Open model. Still vibration issues, spinning on the spot etc. Odd that the old docs seem to show stable performance - perhaps due to older ROS/Ubuntu versions?
