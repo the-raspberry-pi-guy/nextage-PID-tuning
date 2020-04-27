@@ -42,3 +42,6 @@ Discussion with Vlad:
   * Experimented again with the Nextage Open model. Still vibration issues, spinning on the spot etc. Odd that the old docs seem to show stable performance - perhaps due to older ROS/Ubuntu versions?
     * Nextage Open docs were probably in Gazebo 2 (and ROS Indigo), I am using Gazebo 9 (and ROS melodic) - Vlad thinks that this might be to blame
   * Suggestion to also try the Baxter robot
+
+* 27/04
+  * Loaded Baxter robot - going through and comparing URDF and Gazebo config files
