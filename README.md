@@ -45,3 +45,7 @@ Discussion with Vlad:
 
 * 27/04
   * Loaded Baxter robot - going through and comparing URDF and Gazebo config files
+
+* 28/04
+  * Seems that the URDFs for Baxter and Nextage are very similar. Each joint has the same terms - including the dynamics damping that wasn't in the Nextage originally.
+  * Exploring implicitSpringDamper term in Gazebo configuration of Baxter
