@@ -49,4 +49,7 @@ Discussion with Vlad:
 * 28/04
   * Seems that the URDFs for Baxter and Nextage are very similar. Each joint has the same terms - including the dynamics damping that wasn't in the Nextage originally.
   * Exploring implicitSpringDamper term in Gazebo configuration of Baxter
-  * Big breakthrough with implicitSpringDamper - seems to have completley removed the vibration issues and can now tune PID as expected
+  * Big breakthrough with implicitSpringDamper - seems to have completley removed the vibration issues and can now tune PID as expected.
+  * Pushed some good PID values - robot can now be used well in Gazebo
+  * Tried to remove the fixture to the Gazebo world - not quite there yet as robot is spinning on the spot (potentially due to some vibration somewhere?)
+    * PID tune the chest, head etc to try to eliminate this as a cause of vibration
