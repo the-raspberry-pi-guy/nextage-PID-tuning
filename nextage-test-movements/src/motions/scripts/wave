@@ -29,6 +29,6 @@ for i in range(0, len(wavepos)):
 
 trajectory_message.header.stamp = rospy.Time.now()
 print("Waving")
-print(trajectory_message)
+#print(trajectory_message)
 time.sleep(2)
 pub.publish(trajectory_message)
