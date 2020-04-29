@@ -1,0 +1,22 @@
+#!/bin/bash
+
+rosrun motions c_motion_tester 0
+sleep 2
+
+for ((i = 0; i <= 1; i++))
+do
+    rosrun motions h_motion_tester $i
+    sleep 2
+done
+
+for ((i = 0; i <= 5; i++))
+do
+    rosrun motions r_motion_tester $i
+    sleep 2
+done
+
+for ((i = 0; i <= 5; i++))
+do
+    rosrun motions l_motion_tester $i
+    sleep 2
+done
