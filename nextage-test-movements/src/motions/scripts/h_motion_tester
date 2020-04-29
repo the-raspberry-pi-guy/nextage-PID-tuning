@@ -14,7 +14,7 @@ class RightArm:
     def __init__(self, joint):
         self.pub = rospy.Publisher("/head_controller/command", JointTrajectory, queue_size=1)
         self.names = [u'HEAD_JOINT0', u'HEAD_JOINT1']
-        self.rarm_limits = [(-1.2, 1.2),
+        self.head_limits = [(-1.2, 1.2),
                             (-0.39, 1.29)]
         self.joint_num = int(joint[1])
 
@@ -22,8 +22,8 @@ class RightArm:
         initpos = np.zeros(2)
         lower = np.zeros(2)
         upper = np.zeros(2)
-        lower[self.joint_num] = self.rarm_limits[self.joint_num][0]
-        upper[self.joint_num] = self.rarm_limits[self.joint_num][1]
+        lower[self.joint_num] = self.head_limits[self.joint_num][0]
+        upper[self.joint_num] = self.head_limits[self.joint_num][1]
 
         pos = [lower, upper, initpos]
         timing = [3.0, 9.0, 12.0]
