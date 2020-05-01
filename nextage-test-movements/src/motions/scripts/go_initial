@@ -29,7 +29,7 @@ class Arms:
 
         trajectory_message.joint_names = [x.encode('ascii') for x in self.rnames]
         trajectory_message.header.stamp = rospy.Time.now()
-        time.sleep(2)
+        time.sleep(5)
         self.rpub.publish(trajectory_message)
 
         trajectory_message.joint_names = [x.encode('ascii') for x in self.lnames]
