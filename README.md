@@ -53,3 +53,16 @@ Discussion with Vlad:
   * Pushed some good PID values - robot can now be used well in Gazebo
   * Tried to remove the fixture to the Gazebo world - not quite there yet as robot is spinning on the spot (potentially due to some vibration somewhere?)
     * PID tune the chest, head etc to try to eliminate this as a cause of vibration
+    
+    
+ -- CONTINUING WORK --
+* Nextage in Gazebo:
+    * Continue configuration work of the Nextage platform so that it can be dropped into the world and not rotate on the spot (currently it is fixed in place as a workaround for this).
+    *Simulate cameras on the Nextage in Gazebo, and potentially simulate an RGBD camera too like the Intel RealSense.
+    * Be able to get other object's poses (for students to make quick vision applications).
+    * Self-collision checking for trajectories and position streaming - likely through a custom node that checks robot state.
+    * Continue comprehensively documenting the simulation.
+* RSS Course
+    * Be present + contribute to the discussions with Alex about the simulator setup for the RSS course. Future decisions to be made about what simulator will be packaged up to students.
+* EXOTica Examples
+    * Work on some FK/IK/OMPL/TrajOpt examples with the Nextage.
