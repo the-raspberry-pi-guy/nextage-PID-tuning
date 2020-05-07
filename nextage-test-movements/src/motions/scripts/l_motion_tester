@@ -16,7 +16,7 @@ import sys
 class RightArm:
 
     def __init__(self, joint):
-        self.pub = rospy.Publisher("/larm_controller/command", JointTrajectory, queue_size=1)
+        self.pub = rospy.Publisher("/collision_larm_controller/command", JointTrajectory, queue_size=1)
         self.names = [u'LARM_JOINT0', u'LARM_JOINT1', u'LARM_JOINT2', u'LARM_JOINT3', u'LARM_JOINT4', u'LARM_JOINT5']
         self.larm_limits = [(-1.5, 1.5),
                             (-2.4, 0.9),
