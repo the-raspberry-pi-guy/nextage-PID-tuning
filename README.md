@@ -57,10 +57,10 @@ Discussion with Vlad:
     
  -- CONTINUING WORK --
 * Nextage in Gazebo:
-    * Continue configuration work of the Nextage platform so that it can be dropped into the world and not rotate on the spot (currently it is fixed in place as a workaround for this).
-    *Simulate cameras on the Nextage in Gazebo, and potentially simulate an RGBD camera too like the Intel RealSense.
+    * Continue configuration work of the Nextage platform so that it can be dropped into the world and not rotate on the spot (currently it is fixed in place as a workaround for this). :heavy_check_mark:
+    * Simulate cameras on the Nextage in Gazebo :heavy_check_mark:, and potentially simulate an RGBD camera too like the Intel RealSense.
     * Be able to get other object's poses (for students to make quick vision applications).
-    * Self-collision checking for trajectories and position streaming - likely through a custom node that checks robot state.
+    * Self-collision checking for trajectories and position streaming - likely through a custom node that checks robot state. :heavy_check_mark:
     * Continue comprehensively documenting the simulation.
 * RSS Course
     * Be present + contribute to the discussions with Alex about the simulator setup for the RSS course. Future decisions to be made about what simulator will be packaged up to students.
