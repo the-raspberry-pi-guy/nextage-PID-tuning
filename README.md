@@ -61,6 +61,7 @@ Discussion with Vlad:
     * Simulate cameras on the Nextage in Gazebo :heavy_check_mark:, and potentially simulate an RGBD camera too like the Intel RealSense.
     * Be able to get other object's poses (for students to make quick vision applications).
     * Self-collision checking for trajectories and position streaming - likely through a custom node that checks robot state. :heavy_check_mark:
+        * Extend checking to velocities and accelerations too - ensure in limits
     * Continue comprehensively documenting the simulation. :heavy_check_mark:
 * RSS Course
     * Be present + contribute to the discussions with Alex about the simulator setup for the RSS course. Future decisions to be made about what simulator will be packaged up to students.
